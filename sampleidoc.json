@@ -1,0 +1,17 @@
+{
+  "EDI_DC40": {
+       "SNDPRN": "CALLABLE",
+       "SNDPRT" : "LS"
+  },
+  "E1BUPAFS_FS_CREATE_FRM_DATA": [
+    {
+      "BUSINESSPARTNEREXTERN": "A123456789",
+      "PARTNERCATEGORY": "1",
+      "E1BPBUS1006_CENTRAL_PERSON": [
+        {
+          "FIRSTNAME": "Andy",
+          "LASTNAME": "Smith"}
+      ]
+    }
+  ]
+}

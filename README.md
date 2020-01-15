@@ -1,5 +1,7 @@
 # S3toIDoc
-tutorial project how to push IDocs from S3 to SAP through Callable
+
+This is a tutorial project on how to push IDocs from S3 to SAP through [Callable](https://callable.cloud).
+
 # S3 Object to SAP IDoc transfer
 
 This project demos an upload from an S3 object into and SAP system as IDoc. 
@@ -11,8 +13,8 @@ Requirement before deploying:
     * see deployment instruction [AWS Fargate](https://beta.callable.cloud/docs/gettingstarted-aws-fargate.html)
     * see deployment instruction [GCP Cloud Run](https://beta.callable.cloud/docs/gettingstarted-gcp-cloudrun.html)
     * see deployment instruction [Azure ACI](https://beta.callable.cloud/docs/gettingstarted-azure-aci.html)
-* a AWS account where you can deploy AWS CloudFormation templates
-* a S3 bucket to host the deployment artifacts
+* an AWS account where you can deploy AWS CloudFormation templates
+* an     S3 bucket to host the deployment artifacts
 * get the Idoc Reference from Callable
     * open the Callable Resource Index in your browser
     * the URI presented here is the Idoc reference used late on. e.g. "BUPAFS_FS_CREATE_FRM_DATA01/BUPA_FS_CREATE_FRM_DATA"
@@ -55,7 +57,7 @@ aws cloudformation describe-stacks --stack-name s3idoc
 }
 ```
 
-Now you can upload a Idoc in JSON format into the bucket.
+Now you can upload an Idoc in JSON format into the bucket.
 
 The sample provided is a JSON which target the ```BUPAFS_FS_CREATE_FRM_DATA01/BUPA_FS_CREATE_FRM_DATA``` IDoc.
 

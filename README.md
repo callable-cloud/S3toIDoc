@@ -22,14 +22,15 @@ Requirement before deploying:
 Proceedings:
 * checkout the repository
 * deploy the cloudformation template
-  * aws cloudformation package --template-file template.yml --s3-bucket {deployment artifacts bucket name} --output-template .packaged-template.yml
-  * aws cloudformation deploy --s3-bucket {deployment artifacts bucket name} --template-file .packaged-template.yml --capabilities CAPABILITY_IAM --stack-name s3idoc \
-    --parameter-overrides \
-    CallableEndpoint={Callable endpoint} \
-    CallableUser={Callable authentication user} \
-    CallablePassword={Callable authentication password} \
-    IdocReference={Callable IDoc reference}
-
+```
+aws cloudformation create-stack --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --stack-name s3idoc \
+    --template-body=file://template.yml \
+    --parameters \
+   ParameterKey=CallableEndpoint,ParameterValue={Callable endpoint} \
+    ParameterKey=CallableUser,ParameterValue={Callable authentication user} \
+    ParameterKey=CallablePassword,ParameterValue={Callable authentication password} \
+    ParameterKey=IdocReference,ParameterValue={Callable IDoc reference}
+```
 
 ## How to use it
 

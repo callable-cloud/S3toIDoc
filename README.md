@@ -34,7 +34,7 @@ aws cloudformation create-stack --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EX
 
 ## How to use it
 
-First, fetch the S3 bucket that is not attached as Source Bucket.
+First, fetch the S3 bucket that is attached as Source Bucket.
 
 ```
 aws cloudformation describe-stacks --stack-name s3idoc
